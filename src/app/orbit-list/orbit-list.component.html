@@ -5,13 +5,15 @@
         <th>Operational</th>
         <th>Orbit Type</th>
         <th>Launch Date</th>
+        <th>TESTING</th> <!-- Don't forget to delete-->
     </tr>
     <tr class="data-row" *ngFor = "let satellite of satellites">
         <td>{{satellite.name}}</td>
-        <td>{{satellite.type}}</td>
-        <td>{{satellite.Operational}}</td>
+        <td [class.warning]="satellite.isSpaceDebris()">{{satellite.type}}</td>
+        <td>{{satellite.operational}}</td>
         <td>{{satellite.orbitType}}</td>
         <td>{{satellite.launchDate}}</td>
+        <td>TESTING</td> <!-- Don't forget to delete-->
     </tr>
 </table>
 
