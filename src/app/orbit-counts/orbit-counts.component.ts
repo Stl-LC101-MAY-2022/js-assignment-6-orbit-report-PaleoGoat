@@ -37,7 +37,6 @@ export class OrbitCountsComponent implements OnInit {
 			satTypeArr.push(this.satellites[i].type);
 		}
 	}
-	console.log(satTypeArr);
 		return satTypeArr;
   }
  }
