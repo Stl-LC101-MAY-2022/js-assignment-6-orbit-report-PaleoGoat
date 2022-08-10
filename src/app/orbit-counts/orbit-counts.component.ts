@@ -10,6 +10,8 @@ export class OrbitCountsComponent implements OnInit {
 
 	@Input() satellites: Satellite[];
 
+	autoUpdatedSatTypes: string[] = [];
+
   constructor() { }
 
   ngOnInit() {
@@ -28,4 +30,16 @@ export class OrbitCountsComponent implements OnInit {
  }
 
 
-}
+  mkTypeArr(): string[] {
+	let satTypeArr: string[] = [];
+	for (let i = 0; i < this.satellites.length; i++) {
+		if (!satTypeArr.includes(this.satellites[i].type)) {
+			satTypeArr.push(this.satellites[i].type);
+		}
+	}
+	console.log(satTypeArr);
+		return satTypeArr;
+  }
+ }
+
+

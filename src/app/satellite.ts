@@ -19,9 +19,6 @@ export class Satellite {
 			return true;
 		}
 		return false;
-		// let isItSpaceTrash;
-		// isItSpaceTrash = spaceObj === "Space Debris"? true:false;
-		// return isItSpaceTrash;
    }
 }
 

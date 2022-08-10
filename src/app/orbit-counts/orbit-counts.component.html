@@ -1,6 +1,9 @@
 <h3>Satellite Count:</h3>
 <div class="counts">
-	<div>Total: <span class="counts-total">NaN</span></div>
+	<div>Total: <span class="counts-total">{{satellites.length}}</span></div> <!-- The instruction want me to use a structural element, but this doesn't require one . . . -->
+	<div *ngFor="let type of mkTypeArr()">{{type}}: <span class="counts-total">{{countByType(type)}}</span></div>
 </div>
 
 <!-- TODO 4: add logic to count number of satellites displayed -->
+
+
